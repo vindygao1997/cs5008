@@ -1,39 +1,49 @@
 Sharon Gao
-pwd -> /home/sharongao1997
-cd lab01 -> nothing
-ls -> #output.txt# output.txt
-mkdir lab01 ->  mkdir: cannot create directory 'lab01': File exists
-man ls -> manual for 'ls'
-grep bash output.txt -> all contents in output.txt that contains "bash"
 
--bash-4.2$ cd Desktop
--bash: cd: Desktop: No such file or directory
--bash-4.2$ pwd
-/home/sharongao1997
--bash-4.2$ mkdir lab01
-mkdir: cannot create directory ‘lab01’: File exists
--bash-4.2$ ls
-lab01
--bash-4.2$ cd lab01
--bash-4.2$ ls
-#output.txt#  output.txt
--bash-4.2$ emacs output.txt
+-bash-4.2$ git clone https://github.com/vindygao1997/cs5008.git
+Cloning into 'cs5008'...
+warning: You appear to have cloned an empty repository.
+-bash-4.2$ git init
+Initialized empty Git repository in /home/sharongao1997/lab01/.git/
+-bash-4.2$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+-bash-4.2$ git add .
+-bash-4.2$ git commit -m "lab01"
+[master (root-commit) 77bd255] lab01
+ Committer: Xinyi Gao <sharongao1997@login-students.ccs.neu.edu>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
 
-[1]+  Stopped                 emacs output.txt
--bash-4.2$ man
-What manual page do you want?
--bash-4.2$ ls
-output.txt  output.txt~
--bash-4.2$ man ls
--bash-4.2$ grep bash output.txt
--bash-4.2$ cd Desktop
--bash: cd: Desktop: No such file or directory
--bash-4.2$ pwd
--bash-4.2$ mkdir lab01
--bash-4.2$ ls
--bash-4.2$ cd lab01
--bash-4.2$ ls
--bash-4.2$ emacs output.txt
--bash-4.2$ man
--bash-4.2$ ls
--bash-4.2$ man ls
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 70 insertions(+)
+ create mode 100644 data.txt~
+ create mode 100644 output.txt
+ create mode 100644 output.txt~
+ create mode 100644 readme.md
+ create mode 100644 readme.md~
+-bash-4.2$ git branch -M main
+-bash-4.2$ git remote add origin https://github.com/vindygao1997/cs5008.git
+-bash-4.2$ git push -u origin main
+Username for 'https://github.com': vindygao1997
+Password for 'https://vindygao1997@github.com': 
+Counting objects: 6, done.
+Delta compression using up to 48 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (6/6), 938 bytes | 0 bytes/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/vindygao1997/cs5008.git
+ * [new branch]      main -> main
+Branch main set up to track remote branch main from origin.
+-bash-4.2$ git status
+# On branch main
+nothing to commit, working directory clean
+
